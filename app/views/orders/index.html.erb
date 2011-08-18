@@ -1,0 +1,35 @@
+<h1>Listing orders</h1>
+
+<table id="newspaper-a">
+  <tr>
+    <th scope="col">Cutomer</th>
+    <th scope="col">Amount</th>
+    <th scope="col">Discount</th>
+    <th scope="col">Net</th>
+    <th scope="col">Advance</th>
+    <th scope="col">Balance</th>
+    <th scope="col">Delivery date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.cutomer_id %></td>
+    <td><%= order.amount %></td>
+    <td><%= order.discount %></td>
+    <td><%= order.net %></td>
+    <td><%= order.advance %></td>
+    <td><%= order.balance %></td>
+    <td><%= order.delivery_date %></td>
+    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_order_path %>

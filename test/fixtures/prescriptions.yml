@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  customer_id: 1
+  distance_id: 1
+  right_sph: 1.5
+  right_cyl: 
+  right_axi: 1.5
+  right_vision: 1.5
+  left_sph: 1.5
+  left_cyl: 1.5
+  left_axi: 1.5
+  left_vision: 1.5
+
+two:
+  customer_id: 1
+  distance_id: 1
+  right_sph: 1.5
+  right_cyl: 
+  right_axi: 1.5
+  right_vision: 1.5
+  left_sph: 1.5
+  left_cyl: 1.5
+  left_axi: 1.5
+  left_vision: 1.5

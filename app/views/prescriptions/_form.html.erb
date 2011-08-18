@@ -1,0 +1,57 @@
+<%= form_for(@prescription) do |f| %>
+  <% if @prescription.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prescription.errors.count, "error") %> prohibited this prescription from being saved:</h2>
+
+      <ul>
+      <% @prescription.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'Customer Name' %><br />
+    <%= f.collection_select:customer_id , Customer.find(:all), :id, :name %></td>
+  </div>
+  <div class="field">
+    <%= f.label 'Distance' %><br />
+    <%= f.collection_select:distance_id , Distance.find(:all), :id, :name %></td>
+  </div>
+  <div class="field">
+    <%= f.label :right_sph %><br />
+    <%= f.text_field :right_sph %>
+  </div>
+  <div class="field">
+    <%= f.label :right_cyl %><br />
+    <%= f.text_field :right_cyl %>
+  </div>
+  <div class="field">
+    <%= f.label :right_axi %><br />
+    <%= f.text_field :right_axi %>
+  </div>
+  <div class="field">
+    <%= f.label :right_vision %><br />
+    <%= f.text_field :right_vision %>
+  </div>
+  <div class="field">
+    <%= f.label :left_sph %><br />
+    <%= f.text_field :left_sph %>
+  </div>
+  <div class="field">
+    <%= f.label :left_cyl %><br />
+    <%= f.text_field :left_cyl %>
+  </div>
+  <div class="field">
+    <%= f.label :left_axi %><br />
+    <%= f.text_field :left_axi %>
+  </div>
+  <div class="field">
+    <%= f.label :left_vision %><br />
+    <%= f.text_field :left_vision %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

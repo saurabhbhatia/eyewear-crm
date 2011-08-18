@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order_no: MyString
+  customer_id: 1
+  amount: 1.5
+  discount: 1.5
+  net: 1.5
+  advance: 1.5
+  balance: 1.5
+  delivery_date: 2011-08-18
+  order_type_id: 1
+
+two:
+  order_no: MyString
+  customer_id: 1
+  amount: 1.5
+  discount: 1.5
+  net: 1.5
+  advance: 1.5
+  balance: 1.5
+  delivery_date: 2011-08-18
+  order_type_id: 1

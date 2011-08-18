@@ -1,0 +1,41 @@
+<h1>Listing prescriptions</h1>
+
+<table id="newspaper-a">
+  <tr>
+    <th scope="col">Customer</th>
+    <th scope="col">Distance</th>
+    <th scope="col">Right sph</th>
+    <th scope="col">Right cyl</th>
+    <th scope="col">Right axi</th>
+    <th scope="col">Right vision</th>
+    <th scope="col">Left sph</th>
+    <th scope="col">Left cyl</th>
+    <th scope="col">Left axi</th>
+    <th scope="col">Left vision</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @prescriptions.each do |prescription| %>
+  <tr>
+    <td><%= prescription.customer_id %></td>
+    <td><%= prescription.distance_id %></td>
+    <td><%= prescription.right_sph %></td>
+    <td><%= prescription.right_cyl %></td>
+    <td><%= prescription.right_axi %></td>
+    <td><%= prescription.right_vision %></td>
+    <td><%= prescription.left_sph %></td>
+    <td><%= prescription.left_cyl %></td>
+    <td><%= prescription.left_axi %></td>
+    <td><%= prescription.left_vision %></td>
+    <td><%= link_to 'Show', prescription %></td>
+    <td><%= link_to 'Edit', edit_prescription_path(prescription) %></td>
+    <td><%= link_to 'Destroy', prescription, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Prescription', new_prescription_path %>

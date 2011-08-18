@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Customer:</b>
+  <%= @prescription.customer_id %>
+</p>
+
+<p>
+  <b>Distance:</b>
+  <%= @prescription.distance_id %>
+</p>
+
+<p>
+  <b>Right sph:</b>
+  <%= @prescription.right_sph %>
+</p>
+
+<p>
+  <b>Right cyl:</b>
+  <%= @prescription.right_cyl %>
+</p>
+
+<p>
+  <b>Right axi:</b>
+  <%= @prescription.right_axi %>
+</p>
+
+<p>
+  <b>Right vision:</b>
+  <%= @prescription.right_vision %>
+</p>
+
+<p>
+  <b>Left sph:</b>
+  <%= @prescription.left_sph %>
+</p>
+
+<p>
+  <b>Left cyl:</b>
+  <%= @prescription.left_cyl %>
+</p>
+
+<p>
+  <b>Left axi:</b>
+  <%= @prescription.left_axi %>
+</p>
+
+<p>
+  <b>Left vision:</b>
+  <%= @prescription.left_vision %>
+</p>
+
+
+<%= link_to 'Edit', edit_prescription_path(@prescription) %> |
+<%= link_to 'Back', prescriptions_path %>
