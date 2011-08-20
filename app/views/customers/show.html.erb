@@ -3,14 +3,8 @@
 <p>
   <b>Name:</b>
   <%= @customer.name %>
-</p>
-
-<p>
   <b>Middlename:</b>
   <%= @customer.middlename %>
-</p>
-
-<p>
   <b>Surname:</b>
   <%= @customer.surname %>
 </p>
@@ -18,6 +12,16 @@
 <p>
   <b>Address:</b>
   <%= @customer.address %>
+</p>
+
+<p>
+  <b>Religion:</b>
+  <%= @customer.religion %>
+</p>
+
+<p>
+  <b>Martial Status:</b>
+  <%= @customer.marital_status %>
 </p>
 
 <p>
@@ -42,12 +46,12 @@
 
 <p>
   <b>Group:</b>
-  <%= @customer.group_id %>
+  <%= @customer.group.name %>
 </p>
 
 <p>
   <b>Category:</b>
-  <%= @customer.category_id %>
+  <%= @customer.category.name %>
 </p>
 
 <p>

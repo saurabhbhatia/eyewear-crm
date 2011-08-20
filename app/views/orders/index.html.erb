@@ -3,7 +3,7 @@
 <table id="newspaper-a">
   <tr>
     <th scope="col">Cutomer</th>
-    <th scope="col">Amount</th>
+    <th scope="col">Order Type </th>
     <th scope="col">Discount</th>
     <th scope="col">Net</th>
     <th scope="col">Advance</th>
@@ -16,8 +16,10 @@
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%= order.cutomer_id %></td>
-    <td><%= order.amount %></td>
+    <td><%= order.customer.name %>
+        <%= order.customer.middlename %>
+        <%= order.customer.surname %></td>
+    <td><%= order.order_type.name %></td>
     <td><%= order.discount %></td>
     <td><%= order.net %></td>
     <td><%= order.advance %></td>

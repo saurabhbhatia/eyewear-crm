@@ -54,18 +54,28 @@
   </div>
   <div class="field">
     <%= f.label 'Religion' %><br />
-    <%= select_tag :religion, options_for_select([["All Fields", ""], ["Hindu", "hindu"], ["Muslim", "muslim"], ["Sikh", "sikh"], ["Christian", "christian"], ["Parsi", "parsi"]]) %>
+    <%= f.select :religion,
+                           options_for_select([["All Fields", ""],
+                                               ["Hindu", "hindu"], 
+                                               ["Muslim", "muslim"],
+                                               ["Sikh", "sikh"],
+                                               ["Christian", "christian"],
+                                               ["Parsi", "parsi"]]) %>
+
+
   </div>
   <div class="field">
     <%= f.label 'Marital Status' %><br />
-<%= select_tag :marital_status, options_for_select([["All Fields", ""], ["Married", "married"], ["Unmarried", "unmarried"]]) %>
+    <%= f.select :marital_status, options_for_select([["All Fields", ""], ["Married", "married"], ["Unmarried", "unmarried"]]) %>
   </div>
 
   <div class="field">
     <%= f.label :remark %><br />
     <%= f.text_area :remark %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

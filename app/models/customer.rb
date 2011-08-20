@@ -1,6 +1,6 @@
 class Customer < ActiveRecord::Base
-has_many :categories
-has_many :groups
+belongs_to :category
+belongs_to :group
 has_many :orders
-
+has_many :prescriptions
 end

@@ -2,7 +2,9 @@
 
 <p>
   <b>Cutomer:</b>
-  <%= @order.cutomer_id %>
+  <%= @order.customer.name %>
+  <%= @order.customer.middlename %>
+  <%= @order.customer.surname %>
 </p>
 
 <p>
@@ -17,7 +19,7 @@
 
 <p>
   <b>Net:</b>
-  <%= @order.net %>
+  <%= @order.net %> 
 </p>
 
 <p>
@@ -37,4 +39,5 @@
 
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to 'Back', orders_path %> |
+<%= link_to "Generate Bill", order_path(@order, :format => 'pdf')%>

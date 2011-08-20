@@ -5,8 +5,10 @@ gem 'rails', '3.0.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'prawn'
+gem 'ruport'
 gem 'sqlite3'
-gem  'devise'
+gem 'devise'
 # Use unicorn as the web server
 # gem 'unicorn'
 gem 'calendar_date_select', :git => 'http://github.com/paneq/calendar_date_select.git'

@@ -14,10 +14,13 @@ class OrdersController < ApplicationController
   # GET /orders/1.xml
   def show
     @order = Order.find(params[:id])
-
+    @order.net = @order.amount - @order.discount 
+    @order.balance = @order.net - @order.advance  
+  	
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @order }
+      format.pdf { render :layout => false } # Add this line
     end
   end
 
