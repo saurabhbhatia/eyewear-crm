@@ -4,7 +4,7 @@ gem 'rails', '3.0.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'jquery-rails', '>= 1.0.12'
 gem 'prawn'
 gem 'ruport'
 gem 'sqlite3'

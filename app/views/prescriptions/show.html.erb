@@ -1,55 +1,63 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Customer:</b>
-  <%= @prescription.customer.name %>
-</p>
-
-<p>
-  <b>Distance:</b>
-  <%= @prescription.distance.name %>
-</p>
-
-<p>
-  <b>Right sph:</b>
-  <%= @prescription.right_sph %>
-</p>
-
-<p>
-  <b>Right cyl:</b>
-  <%= @prescription.right_cyl %>
-</p>
-
-<p>
-  <b>Right axi:</b>
-  <%= @prescription.right_axi %>
-</p>
-
-<p>
-  <b>Right vision:</b>
-  <%= @prescription.right_vision %>
-</p>
-
-<p>
-  <b>Left sph:</b>
-  <%= @prescription.left_sph %>
-</p>
-
-<p>
-  <b>Left cyl:</b>
-  <%= @prescription.left_cyl %>
-</p>
-
-<p>
-  <b>Left axi:</b>
-  <%= @prescription.left_axi %>
-</p>
-
-<p>
-  <b>Left vision:</b>
-  <%= @prescription.left_vision %>
-</p>
+<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+<tr>
+  <td class="helpHed"><b>Customer Name :</b>
+  <%= @prescription.customer.name %></td>
+  <td class="helpHed"><b>Distance Status:</b>
+  <%= @prescription.distance.name %></td>
+</tr>
+</table>
+<br />
 
 
-<%= link_to 'Edit', edit_prescription_path(@prescription) %> |
-<%= link_to 'Back', prescriptions_path %>
+<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+<td class="helpHed"><h2>Right Eye</h2><br />
+ <table>
+<tr>
+  <td class="helpHed"><b>Right sph:</b>
+  <%= @prescription.right_sph %></td>
+</tr>
+
+<tr>
+  <td class="helpHed"><b>Right cyl:</b>
+  <%= @prescription.right_cyl %></td>
+</tr>
+
+<tr>
+  <td class="helpHed"><b>Right axi:</b>
+  <%= @prescription.right_axi %></td>
+</tr>
+
+<tr>
+  <td class="helpHed"><b>Right vision:</b>
+  <%= @prescription.right_vision %></td>
+</tr>
+</table></td>
+
+<td class="helpHed"><h2>Left Eye</h2><br /><table>
+<tr>
+  <td class="helpHed"><b>Left sph:</b>
+  <%= @prescription.left_sph %></td>
+</tr>
+
+<tr>
+  <td class="helpHed"><b>Left cyl:</b>
+  <%= @prescription.left_cyl %></td>
+</tr>
+
+<tr>
+  <td class="helpHed"><b>Left axi:</b>
+  <%= @prescription.left_axi %></td>
+</tr>
+
+<tr>
+  <td class="helpHed"><b>Left vision:</b>
+  <%= @prescription.left_vision %></td>
+</tr>
+</td>
+ </table>
+</table>
+<br />
+<p><%= link_to 'Edit', edit_prescription_path(@prescription) %> |
+<%= link_to 'Back', prescriptions_path %></p>

@@ -1,43 +1,46 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <b>Cutomer:</b>
+<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+<tr>
+    <td class="helpHed"><b>Customer Name:</b>
   <%= @order.customer.name %>
   <%= @order.customer.middlename %>
-  <%= @order.customer.surname %>
-</p>
+  <%= @order.customer.surname %></td>
+</tr>
 
-<p>
-  <b>Amount:</b>
-  <%= @order.amount %>
-</p>
+<tr>
+    <td class="helpHed"><b>Amount:</b>
+  <%= @order.amount %></td>
+</tr>
 
-<p>
-  <b>Discount:</b>
-  <%= @order.discount %>
-</p>
+<tr>
+    <td class="helpHed"><b>Discount:</b>
+  <%= @order.discount %></td>
+</tr>
 
-<p>
-  <b>Net:</b>
-  <%= @order.net %> 
-</p>
+<tr>
+    <td class="helpHed"><b>Net:</b>
+  <%= @order.net %> </td>
+</tr>
 
-<p>
-  <b>Advance:</b>
-  <%= @order.advance %>
-</p>
+<tr>
+    <td class="helpHed"><b>Advance:</b>
+  <%= @order.advance %></td>
+</tr>
 
-<p>
-  <b>Balance:</b>
-  <%= @order.balance %>
-</p>
+<tr>
+    <td class="helpHed"><b>Balance:</b>
+  <%= @order.balance %></td>
+</tr>
 
-<p>
-  <b>Delivery date:</b>
-  <%= @order.delivery_date %>
-</p>
+<tr>
+    <td class="helpHed"><b>Delivery date:</b>
+  <%= @order.delivery_date %></td>
+</tr>
+</table>
 
-
+<br />
+<h2>
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %> |
 <%= link_to "Generate Bill", order_path(@order, :format => 'pdf')%>
+</h2>

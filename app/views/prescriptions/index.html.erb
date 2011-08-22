@@ -1,17 +1,22 @@
 <h1>Listing prescriptions</h1>
+<br />
+<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+ <tr><td></td><td></td>
+    <td colspan="4" class="helpHed"> Right EYE </td>
+    <td colspan="4" class="helpHed"> Left EYE </td>
+ </tr> 
 
-<table id="newspaper-a">
   <tr>
-    <th scope="col">Customer</th>
-    <th scope="col">Distance</th>
-    <th scope="col">Right sph</th>
-    <th scope="col">Right cyl</th>
-    <th scope="col">Right axi</th>
-    <th scope="col">Right vision</th>
-    <th scope="col">Left sph</th>
-    <th scope="col">Left cyl</th>
-    <th scope="col">Left axi</th>
-    <th scope="col">Left vision</th>
+    <td class="helpHed">Customer Name</td>
+    <td class="helpHed">Distance</th>
+    <td class="helpHed">sph</th>
+    <td class="helpHed">cyl</th>
+    <td class="helpHed">axi</th>
+    <td class="helpHed">vision</th>
+    <td class="helpHed">sph</th>
+    <td class="helpHed">cyl</th>
+    <td class="helpHed">axi</th>
+    <td class="helpHed">vision</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,8 +24,8 @@
 
 <% @prescriptions.each do |prescription| %>
   <tr>
-    <td><%= prescription.customer_id %></td>
-    <td><%= prescription.distance_id %></td>
+    <td class="helpHed"><%= prescription.customer.name %></td>
+    <td><%= prescription.distance.name %></td>
     <td><%= prescription.right_sph %></td>
     <td><%= prescription.right_cyl %></td>
     <td><%= prescription.right_axi %></td>

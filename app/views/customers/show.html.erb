@@ -1,64 +1,63 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></tr>
 
-<p>
-  <b>Name:</b>
-  <%= @customer.name %>
-  <b>Middlename:</b>
-  <%= @customer.middlename %>
-  <b>Surname:</b>
-  <%= @customer.surname %>
-</p>
+<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+<tr>
+  <td class="helpHed"><b>Name:</b>
+     <%= @customer.name %>
+     <%= @customer.middlename %>
+     <%= @customer.surname %></td>
+</tr>
 
-<p>
-  <b>Address:</b>
-  <%= @customer.address %>
-</p>
+<tr>
+  <td class="helpHed"><b>Address:</b>
+  <%= @customer.address %></td>
+</tr>
 
-<p>
-  <b>Religion:</b>
-  <%= @customer.religion %>
-</p>
+<tr>
+  <td class="helpHed"><b>Religion:</b>
+  <%= @customer.religion %></td>
+</tr>
 
-<p>
-  <b>Martial Status:</b>
-  <%= @customer.marital_status %>
-</p>
+<tr>
+  <td class="helpHed"><b>Martial Status:</b>
+  <%= @customer.marital_status %></td>
+</tr>
 
-<p>
-  <b>Area:</b>
-  <%= @customer.area %>
-</p>
+<tr>
+  <td class="helpHed"><b>Area:</b>
+  <%= @customer.area %></td>
+</tr>
 
-<p>
-  <b>City:</b>
-  <%= @customer.city %>
-</p>
+<tr>
+  <td class="helpHed"><b>City:</b>
+  <%= @customer.city %></td>
+</tr>
 
-<p>
-  <b>Business:</b>
-  <%= @customer.business %>
-</p>
+<tr>
+  <td class="helpHed"><b>Business:</b>
+  <%= @customer.business %></td>
+</tr>
 
-<p>
-  <b>Phone number:</b>
-  <%= @customer.phone_number %>
-</p>
+<tr>
+  <td class="helpHed"><b>Phone number:</b>
+  <%= @customer.phone_number %></td>
+</tr>
 
-<p>
-  <b>Group:</b>
+<tr>
+  <td class="helpHed"><b>Group:</b>
   <%= @customer.group.name %>
-</p>
+</tr>
 
-<p>
-  <b>Category:</b>
-  <%= @customer.category.name %>
-</p>
+<tr>
+  <td class="helpHed"><b>Category:</b>
+  <%= @customer.category.name %></td>
+</tr>
 
-<p>
-  <b>Remark:</b>
-  <%= @customer.remark %>
-</p>
-
-
+<tr>
+  <td class="helpHed"><b>Remark:</b><br />
+  <%= @customer.remark %></td>
+</tr>
+</table>
+<br />
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>

@@ -1,30 +1,29 @@
 <h1>Listing orders</h1>
 
-<table id="newspaper-a">
+<table summary="Software or other data table" class="sofT" cellspacing="0" border>
   <tr>
-    <th scope="col">Cutomer</th>
-    <th scope="col">Order Type </th>
-    <th scope="col">Discount</th>
-    <th scope="col">Net</th>
-    <th scope="col">Advance</th>
-    <th scope="col">Balance</th>
-    <th scope="col">Delivery date</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <td colspan="4" class="helpHed"> Customer Name</td>
+    <td class="helpHed"> Order Type </td>
+    <td class="helpHed"> Delivery date</td>
+    <td class="helpHed"> Amount Status</td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
 
 <% @orders.each do |order| %>
   <tr>
-    <td><%= order.customer.name %>
+    <td colspan="4" class="helpHed">
+        <%= order.customer.name %>
         <%= order.customer.middlename %>
         <%= order.customer.surname %></td>
     <td><%= order.order_type.name %></td>
-    <td><%= order.discount %></td>
-    <td><%= order.net %></td>
-    <td><%= order.advance %></td>
-    <td><%= order.balance %></td>
     <td><%= order.delivery_date %></td>
+    <td><% if order.balance==0.0 %></td>
+             <b style = color:green> Paid </b>
+         <% else %>
+             <b style = color:red> Un Paid </b>
+         <% end %>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
