@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
+<% if @order.balance > 0 %>
+ <h1> Pendind Amount : <%= @order.balance %> </h1>
+<% end %>
+<br />
 <table summary="Software or other data table" class="sofT" cellspacing="0" border>
 <tr>
     <td class="helpHed"><b>Customer Name:</b>
@@ -27,10 +31,18 @@
   <%= @order.advance %></td>
 </tr>
 
+<% if @order.balance >0.0 %>
 <tr>
     <td class="helpHed"><b>Balance:</b>
-  <%= @order.balance %></td>
+    <b style = "color:red"><%= @order.balance %></b></td>
 </tr>
+<% else %>
+<tr>
+    <td class="helpHed"><b>Balance:</b>
+    <b style = "color:green"><%= @order.balance %></b></td>
+</tr>
+<% end %>
+
 
 <tr>
     <td class="helpHed"><b>Delivery date:</b>
@@ -39,8 +51,9 @@
 </table>
 
 <br />
-<h2>
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %> |
-<%= link_to "Generate Bill", order_path(@order, :format => 'pdf')%>
-</h2>
+
+<h4>
+  <u><%= link_to 'Edit', edit_order_path(@order) %></u> |
+  <u><%= link_to 'View All', orders_path %></u> |
+  <u><%= link_to "Generate Bill", order_path(@order, :format => 'pdf')%></u>
+</h4>

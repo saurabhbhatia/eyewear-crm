@@ -21,6 +21,7 @@ p  { margin: 0 0 15px; }
 h1 { letter-spacing: -0.04em; font-size: 1.8em; text-shadow: 1px 1px 1px #000; }
 h2 { font-size: 1.4em; text-shadow: 1px 1px 1px #fff; margin: 0 0 10px; color: #008080; }
 h3 { font-size: 1.2em; margin: 0 0 6px; }
+h4 { font-size: 1.2em Pirulen; margin: 0 0 6px;}
 
 #menu { clear: both; padding: 13px 0 0; }
 #menu li { display: inline; font-size: 1.2em; }

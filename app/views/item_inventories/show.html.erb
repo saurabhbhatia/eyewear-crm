@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Order type:</b>
+  <%= @item_inventory.order_type_id %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @item_inventory.quantity %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_inventory_path(@item_inventory) %> |
+<%= link_to 'Back', item_inventories_path %>

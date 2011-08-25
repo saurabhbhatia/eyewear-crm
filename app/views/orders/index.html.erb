@@ -1,19 +1,19 @@
 <h1>Listing orders</h1>
-
+<br />
 <table summary="Software or other data table" class="sofT" cellspacing="0" border>
   <tr>
-    <td colspan="4" class="helpHed"> Customer Name</td>
-    <td class="helpHed"> Order Type </td>
-    <td class="helpHed"> Delivery date</td>
-    <td class="helpHed"> Amount Status</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td class="helpHed"> Customer Name</th>
+    <td class="helpHed"> Order Type </th>
+    <td class="helpHed"> Delivery date</th>
+    <td class="helpHed"> Amount Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @orders.each do |order| %>
   <tr>
-    <td colspan="4" class="helpHed">
+    <td>
         <%= order.customer.name %>
         <%= order.customer.middlename %>
         <%= order.customer.surname %></td>

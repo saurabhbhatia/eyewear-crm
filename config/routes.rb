@@ -1,18 +1,30 @@
 JasOpticals::Application.routes.draw do
 
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  resources :item_inventories
+
+  get "order_types/index"
+
+  get "order_types/new"
+
+  get "order_types/edit"
+
+  get "order_types/show"
+
+  get "order_types/update"
+
   devise_for :users
 
   resources :prescriptions
-
   resources :orders
-
+  resources :order_types
   resources :groups
-
   resources :categories
-
   resources :customers
 
-devise_for :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

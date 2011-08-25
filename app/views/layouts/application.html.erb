@@ -18,14 +18,14 @@ Released   : 20100529
 
   <title>Shoonyek CRM Jas Opticals</title>
   <%= stylesheet_link_tag 'main','table' %>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'prototype.js' %>
   <%= calendar_date_select_includes %>
   <%= csrf_meta_tag %>
 </head>
 <body>
 	<div id="header">
 		<div class="wrap">
-			<h1 id="logo"><a href="#">NAUTICA</a></h1>
+			<h1 id="logo"><a href="#"><b style = "font-family:BoisterBlack;font-size:30px;color:orange"> EYE WEAR CRM</b></a></h1>
 <p><br />
   <% if user_signed_in? %>
     Signed in as <%= current_user.email %>. Not you?
@@ -39,7 +39,7 @@ Released   : 20100529
 				<li class="current_page_item"><%= link_to 'Customers', customers_path %></a></li>
 					<li><%= link_to 'Orders', orders_path %></li>
 					<li><%= link_to 'Prescription', prescriptions_path %></li>
-					<li><a href="#">Inventory</a></li>
+					<li><a href="/item_inventories">Inventory</a></li>
 					<li><a href="#">Reports</a></li>
 					<li><%= link_to 'Configuration', configuration_path %></li>
 				</ul>

@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></tr>
 
+<%= link_to "Generate Order", new_order_path(:customer_id => @customer), :method => :get %>
+
+
 <table summary="Software or other data table" class="sofT" cellspacing="0" border>
 <tr>
   <td class="helpHed"><b>Name:</b>

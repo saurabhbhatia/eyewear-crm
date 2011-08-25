@@ -1,3 +1,4 @@
+<br />
 <%= form_for(@order) do |f| %>
   <% if @order.errors.any? %>
     <div id="error_explanation">
@@ -12,31 +13,40 @@
   <% end %>
 
   <div class="field">
-    <%= f.label 'Customer Name' %><br />
-    <%= f.collection_select:customer_id , Customer.find(:all), :id, :name %></td>
-  </div>
+       <%= f.hidden_field :customer_id, :value=> (params[:customer_id]) %>
+  </div><p></p>
+
   <div class="field">
-    <%= f.label 'Order Type' %><br />
+    <b><%= f.label 'Order Type' %></b><br />
     <%= f.collection_select:order_type_id , OrderType.find(:all), :id, :name %></td>
-  </div>
+  </div><p></p>
 
   <div class="field">
-    <%= f.label :amount %><br />
-    <%= f.text_field :amount %>
-  </div>
-  <div class="field">
-    <%= f.label :discount %><br />
-    <%= f.text_field :discount %>
-  </div>
+    <b><%= f.label 'Order Type Quantity' %></b><br />
+       <%= f.text_field:quantity %></td>
+  </div><p></p>
+
 
   <div class="field">
-    <%= f.label :advance %><br />
-    <%= f.text_field :advance %>
-  </div>
-  <div class="field">
+    <b><%= f.label :amount %></b><br />
+    <%= f.text_field :amount, :placeholder => "Original Amount" %>
+  </div><p></p>
 
-<%= f.calendar_date_select :delivery_date %> 
-  </div>
+  <div class="field">
+    <b><%= f.label :discount %></b><br />
+    <%= f.text_field :discount,:placeholder => "Discount amount" %>
+  </div><p></p>
+
+  <div class="field">
+    <b><%= f.label :advance %></b><br />
+    <%= f.text_field :advance, :placeholder => "Advance Amount" %>
+  </div><p></p>
+
+  <div class="field">
+    <b><%= f.label :Delivery_Date %></b><br />
+    <%= f.calendar_date_select :delivery_date, :placeholder => "Enter The date of delivery" %> 
+  </div><p></p>
+
   <div class="actions">
     <%= f.submit %>
   </div>

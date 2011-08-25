@@ -1,0 +1,2 @@
+module OrderTypesHelper
+end

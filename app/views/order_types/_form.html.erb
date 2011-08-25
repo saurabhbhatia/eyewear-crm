@@ -1,0 +1,34 @@
+<br />
+<%= form_for(@order_type) do |f| %>
+  <% if @order_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order_type.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <b><%= f.label 'Order Type Name' %></b><br />
+    <%= f.text_field :name, :placeholder => "Order Item name" %>
+  </div><p></p>
+
+  <div class="field">
+    <b><%= f.label 'Color' %></b><br />
+    <%= f.text_field :color, :placeholder => "Order Item name" %>
+  </div><p></p>
+
+  <div class="field">
+    <b><%= f.label 'Brand Name' %></b><br />
+    <%= f.text_field :brand, :placeholder => "Order Item name" %>
+  </div><p></p>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

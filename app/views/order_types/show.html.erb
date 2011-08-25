@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Product Detail:</b>
+  <%= @order_type.name %>
+</p>
+
+<p>
+  <b>Product_Color:</b>
+  <%= @order_type.color %>
+</p>
+
+<p>
+  <b>Product Brand Name:</b>
+  <%= @order_type.brand %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_type_path(@order_type) %> |
+<%= link_to 'Back', order_types_path %> |
+<%= link_to "Generate Bill", order_type_path(@order_type, :format => 'pdf')%>

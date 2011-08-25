@@ -4,13 +4,15 @@ gem 'rails', '3.0.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'jquery-rails', '>= 1.0.12'
+#gem 'jquery-rails', '>= 1.0.12'
 gem 'prawn'
-gem 'ruport'
+#gem 'ruport'
 gem 'sqlite3'
-gem 'devise'
-# Use unicorn as the web server
-# gem 'unicorn'
+gem 'devise' # Devise must be required before RailsAdmin
+gem 'activeadmin'
+#gem 'sass-rails'
+#gem "meta_search",    '>= 1.1.0.pre'
+#gem 'unicorn'
 gem 'calendar_date_select', :git => 'http://github.com/paneq/calendar_date_select.git'
 
 
