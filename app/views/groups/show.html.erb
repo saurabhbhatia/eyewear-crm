@@ -1,10 +1,12 @@
-<p id="notice"><%= notice %></p>
+<h4 id="notice"><%= notice %></h4>
 
-<p>
-  <b>Name:</b>
-  <%= @group.name %>
-</p>
+<table summary="Software or other data table" class="sofT" cellspacing="0" border>
 
-
+<tr>
+  <td class="helpHed"><b>Name:</b>
+  <%= @group.name %></td>
+</tr>
+</table>
+<br />
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
