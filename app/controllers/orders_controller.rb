@@ -44,24 +44,19 @@ class OrdersController < ApplicationController
   # POST /orders.xml
   def create
 
-    @inventory = ItemInventory.find(:all)
-    @inventory.each do |i|
-             logger.info "dfdifhdifh"+ i.inspect
     @order = Order.new(params[:order])
+
     respond_to do |format|
       if @order.save
-         #@inventory = ItemInventory.find(@order)
-         #@inventory.quantity = @inventory.quantity - params["#{@order.id}"][:quantity].to_i
-         #@inventory.save
+        @inventory = Order.find("#{@order.id}").order_type.update_attributes(:quantity => (@order.order_type.quantity)-(@order.quantity))
+        logger.info "dfisfisfh"+@inventory.inspect
         format.html { redirect_to(@order, :notice => 'Order was successfully created.') }
         format.xml  { render :xml => @order, :status => :created, :location => @order }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
       end
-      end
-    end
-  end
+   end
 end
   # PUT /orders/1
   # PUT /orders/1.xml

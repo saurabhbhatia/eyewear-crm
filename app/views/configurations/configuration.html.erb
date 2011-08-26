@@ -1,3 +1,38 @@
-<%= link_to 'Add Groups', new_group_path %><br/><%= link_to 'All Groups', groups_path %><br/>
-<%= link_to 'Add Categories', new_category_path %><br/><%= link_to 'All Categories', categories_path %><br/>
+<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+<tr> 
+ <th>
+<h4>
+   <%= link_to 'Add Groups', new_group_path %> |
+   <%= link_to 'List Groups', groups_path %> |
+   <%= link_to 'Add Categories', new_category_path %> |
+   <%= link_to 'List Categories', categories_path %> |
+   <%= link_to 'Add Items', new_order_type_path %> |
+   <%= link_to 'List Items', order_types_path %> 
+</h4>
+ </th>
+</tr>
+</table>
 
+<br/><br/>
+
+<h1>items inventory low</h1>
+<br />
+
+<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+<tr>
+  <th>Product Name</th>
+  <th>Product Color</th>
+  <th>Product brand</th>
+  <th>Available Quantity</th>
+</tr>
+
+<% @inventory.each do |i| %>
+
+<tr>
+    <td style ="background-color:#DC143C;color:white"><%= i.name %></td>
+    <td style ="background-color:#DC143C;color:white"><%= i.color %></td>
+    <td style ="background-color:#DC143C;color:white"><%= i.brand %></td>
+    <td style ="background-color:#DC143C;color:white"><%= i.quantity %></td>
+</tr>
+<% end %>    
+</table>

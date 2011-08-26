@@ -1,10 +1,10 @@
 JasOpticals::Application.routes.draw do
 
+  get "inventories/index"
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
-
-  resources :item_inventories
 
   get "order_types/index"
 
