@@ -7,8 +7,6 @@ class CreateOrderTypes < ActiveRecord::Migration
     end
   end
 
-   @order_type = OrderType.create(:name=>"Lens")
-   @order_type = OrderType.create(:name=>"Specs")
 
   def self.down
     drop_table :order_types

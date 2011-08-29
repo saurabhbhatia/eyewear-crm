@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.10'
+gem 'rails', '3.0.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,7 +11,8 @@ gem 'prawn'
 #gem "actionpack", "~> 3.0.10"
 #gem "actionpack", "~> 3.1.0.beta1"
 gem "message_block"
-gem 'sqlite3'
+gem 'mysql'
+#gem 'sqlite3'
 gem 'devise' # Devise must be required before RailsAdmin
 gem 'activeadmin'
 #gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git', :branch => 'rails-3.0'
