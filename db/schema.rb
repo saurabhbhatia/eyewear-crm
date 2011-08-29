@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110826083859) do
+ActiveRecord::Schema.define(:version => 20110829043512) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(:version => 20110826083859) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "brands", :force => true do |t|
+    t.integer  "order_type_id"
+    t.string   "name"
+    t.string   "model"
+    t.string   "color"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -82,21 +92,11 @@ ActiveRecord::Schema.define(:version => 20110826083859) do
     t.datetime "updated_at"
   end
 
-  create_table "item_inventories", :force => true do |t|
-    t.integer  "order_type_id"
-    t.integer  "quantity"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "order_id"
-  end
-
   create_table "order_types", :force => true do |t|
     t.string   "name"
+    t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "color"
-    t.string   "brand"
-    t.integer  "quantity"
   end
 
   create_table "orders", :force => true do |t|

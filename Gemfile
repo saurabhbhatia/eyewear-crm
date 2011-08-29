@@ -12,6 +12,7 @@ gem 'prawn'
 #gem "actionpack", "~> 3.1.0.beta1"
 gem "message_block"
 gem 'sqlite3'
+gem 'mysql'
 gem 'devise' # Devise must be required before RailsAdmin
 gem 'activeadmin'
 #gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git', :branch => 'rails-3.0'

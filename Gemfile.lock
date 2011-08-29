@@ -78,6 +78,7 @@ GEM
       activesupport (~> 3.0.2)
       arel (~> 2.0.2)
     mime-types (1.16)
+    mysql (2.8.1)
     orm_adapter (0.0.5)
     pdf-reader (0.10.0)
       Ascii85 (~> 1.0.0)
@@ -126,6 +127,7 @@ DEPENDENCIES
   calendar_date_select!
   devise
   message_block
+  mysql
   prawn
   rails (= 3.0.10)
   sqlite3

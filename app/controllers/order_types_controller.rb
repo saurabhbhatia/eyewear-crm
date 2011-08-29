@@ -5,6 +5,7 @@ class OrderTypesController < ApplicationController
 
   def new
    @order_type = OrderType.new
+   @order_type.brands.build
   end
 
   def edit
@@ -18,9 +19,9 @@ class OrderTypesController < ApplicationController
   def create 
    @order_type = OrderType.create(params[:order_type])
      if @order_type.save
-       flash[:notice]= "'#{@order_type.name}' saved Successfully"
+       flash[:notice]= "#{@order_type.name} saved Successfully"
+       redirect_to (@order_type)
      else 
-       redirect_to new_order_type_path
        flash[:notice] = "there was an error saving '#{@order_type.name}'"
     end
   end
@@ -30,7 +31,7 @@ class OrderTypesController < ApplicationController
 
     respond_to do |format|
       if @order_type.update_attributes(params[:order_type])
-        format.html { redirect_to(@order_type, :notice => "'#{@order_type.name}' was successfully updated.") }
+        format.html { redirect_to(@order_type, :notice => "#{@order_type.name} was successfully updated.") }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

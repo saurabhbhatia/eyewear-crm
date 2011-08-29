@@ -13,22 +13,45 @@
   <% end %>
 
   <div class="field">
-    <b><%= f.label 'Order Type Name' %></b><br />
+    <b><%= f.label 'Product Name' %></b><br />
     <%= f.text_field :name, :placeholder => "Order Item name" %>
   </div><p></p>
 
-  <div class="field">
-    <b><%= f.label 'Color' %></b><br />
-    <%= f.text_field :color, :placeholder => "Order Item name" %>
-  </div><p></p>
 
-  <div class="field">
-    <b><%= f.label 'Brand Name' %></b><br />
-    <%= f.text_field :brand, :placeholder => "Order Item name" %>
-  </div><p></p>
+<div id="brands">
+  <% f.fields_for :brands do |brand| %>
+    <% content_for :jstemplates do -%>
+    <%= "var color='#{@color_template}'" unless @color_template == 0 %>
+    <% @color_template = 0 -%>
+  <% end -%>
 
+<%= render :partial => 'brand', :locals => { :f => brand } %>
+<% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br />
   <div class="actions">
     <%= f.submit %>
   </div>
 
+
 <% end %>
+

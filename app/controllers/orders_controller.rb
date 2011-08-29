@@ -48,7 +48,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        @inventory = Order.find("#{@order.id}").order_type.update_attributes(:quantity => (@order.order_type.quantity)-(@order.quantity))
+        @inventory = Order.find("#{@order.id}").order_type.brand.update_attributes(:quantity => (@order.order_type.brands.quantity)-(@order.quantity))
         logger.info "dfisfisfh"+@inventory.inspect
         format.html { redirect_to(@order, :notice => 'Order was successfully created.') }
         format.xml  { render :xml => @order, :status => :created, :location => @order }

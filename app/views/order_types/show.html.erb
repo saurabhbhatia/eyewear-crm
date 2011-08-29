@@ -1,21 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Product Detail:</b>
-  <%= @order_type.name %>
-</p>
+<h1>
+  <b>Product name:</b>
+  <b style = "color:green"><%= @order_type.name %>
+</h1><br/ >
 
-<p>
-  <b>Product_Color:</b>
-  <%= @order_type.color %>
-</p>
-
-<p>
-  <b>Product Brand Name:</b>
-  <%= @order_type.brand %>
-</p>
+<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+  <tr>
+    <td class="helpHed"> Product Brand Name</td>
+    <td class="helpHed"> Product Model Name</td>
+    <td class="helpHed"> Product color</td>
+    <td class="helpHed"> Quantity</td>
+  </tr>
+<% @order_type.brands.each do |p_d| %>
+  <tr>
+   <td><%= p_d.name %></td>
+   <td><%= p_d.model %></td>
+   <td><%= p_d.color %></td>
+   <td><%= p_d.quantity %></td>
+<% end %>
+</table>
+<br />
 
 
 <%= link_to 'Edit', edit_order_type_path(@order_type) %> |
-<%= link_to 'Back', order_types_path %> |
-<%= link_to "Generate Bill", order_type_path(@order_type, :format => 'pdf')%>
+<%= link_to 'All Products', order_types_path %> | 
+<%= link_to 'Add More', new_order_type_path %> 

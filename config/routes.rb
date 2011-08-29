@@ -6,17 +6,15 @@ JasOpticals::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  get "order_types/index"
+  #get "order_types/index"
+  #get "order_types/new"
+  #get "order_types/edit"
+  #get "order_types/show"
+  #get "order_types/update"
 
-  get "order_types/new"
-
-  get "order_types/edit"
-
-  get "order_types/show"
-
-  get "order_types/update"
-
-  devise_for :users
+  devise_for :users do 
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
 
   resources :prescriptions
   resources :orders

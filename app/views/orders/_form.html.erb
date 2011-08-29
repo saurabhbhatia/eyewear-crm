@@ -1,4 +1,7 @@
 <br />
+<% unless Customer.name %>
+<b>   Please Create a Customer First </b>
+<% else %>
 <%= form_for(@order) do |f| %>
   <% if @order.errors.any? %>
     <div id="error_explanation">
@@ -50,4 +53,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %>
 <% end %>

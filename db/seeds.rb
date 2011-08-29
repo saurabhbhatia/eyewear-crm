@@ -7,4 +7,16 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 distances = Distance.create([{ :name => 'Distant' }, { :name => 'Near' }])
-order_types = OrderType.create([{ :name => 'Spectacles' }, { :name => 'Eye-Teststing' }, { :name => 'Sun-Glasses' }, { :name => 'Contact Lences' }])
+
+order_types = OrderType.create([{ :name => 'Spectacles', :color => 'Black', :brand => 'Reebok', :quantity => 1000 }])
+order_types = OrderType.create([{ :name => 'Eye-Teststing', :color => 'Blue', :brand => 'Reebok', :quantity => 1000 }])
+order_types = OrderType.create([{ :name => 'Sun-Glasses', :color => 'Gray', :brand => 'Police', :quantity => 1000 }])
+order_types = OrderType.create([{ :name => 'Contact Lences', :color => 'Green', :brand => 'Philips', :quantity => 1000 }])
+
+
+order_type = Group.create([{ :name => 'Gold Customer' },
+                           { :name => 'Silver Customer' },
+                           { :name => 'Other  Customer' }])
+
+order_type = Category.create([{ :name => 'Festival Offer' },
+                           { :name => 'Monsoon Dhamaka' }])
