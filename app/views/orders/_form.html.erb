@@ -15,6 +15,12 @@
     </div>
   <% end %>
 
+
+  <div class="field">
+    <b><%= f.label 'Customer' %></b><br />
+    <%= f.collection_select:customer_id , Customer.find(:all), :id, :name %></td>
+  </div><p></p>
+
   <div class="field">
        <%= f.hidden_field :customer_id, :value=> (params[:customer_id]) %>
   </div><p></p>
