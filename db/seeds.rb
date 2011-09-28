@@ -8,10 +8,10 @@
 
 distances = Distance.create([{ :name => 'Distant' }, { :name => 'Near' }])
 
-order_types = OrderType.create([{ :name => 'Spectacles', :color => 'Black', :brand => 'Reebok', :quantity => 1000 }])
-order_types = OrderType.create([{ :name => 'Eye-Teststing', :color => 'Blue', :brand => 'Reebok', :quantity => 1000 }])
-order_types = OrderType.create([{ :name => 'Sun-Glasses', :color => 'Gray', :brand => 'Police', :quantity => 1000 }])
-order_types = OrderType.create([{ :name => 'Contact Lences', :color => 'Green', :brand => 'Philips', :quantity => 1000 }])
+order_types = OrderType.create([{ :name => 'Spectacles', :quantity => 1000 }])
+order_types = OrderType.create([{ :name => 'Eye-Teststing',  :quantity => 1000 }])
+order_types = OrderType.create([{ :name => 'Sun-Glasses',  :quantity => 1000 }])
+order_types = OrderType.create([{ :name => 'Contact Lences',  :quantity => 1000 }])
 
 
 order_type = Group.create([{ :name => 'Gold Customer' },

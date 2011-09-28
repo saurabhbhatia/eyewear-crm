@@ -1,22 +1,22 @@
 <h1>Listing prescriptions</h1>
 <br />
-<table summary="Software or other data table" class="sofT" cellspacing="0" border>
- <tr><td></td><td></td>
+<table border>
+ <tr><thead>
+    <td></td><td></td>
     <td colspan="4" class="helpHed"> Right EYE </td>
     <td colspan="4" class="helpHed"> Left EYE </td>
  </tr> 
-
+</thead>
   <tr>
-    <td class="helpHed">Customer Name</td>
-    <td class="helpHed">Distance</th>
-    <td class="helpHed">sph</th>
-    <td class="helpHed">cyl</th>
-    <td class="helpHed">axi</th>
-    <td class="helpHed">vision</th>
-    <td class="helpHed">sph</th>
-    <td class="helpHed">cyl</th>
-    <td class="helpHed">axi</th>
-    <td class="helpHed">vision</th>
+    <td>Customer Name</td>
+    <td>sph</th>
+    <td>cyl</th>
+    <td>axi</th>
+    <td>vision</th>
+    <td>sph</th>
+    <td>cyl</th>
+    <td>axi</th>
+    <td>vision</th>
     <th></th>
     <th></th>
     <th></th>
@@ -24,8 +24,7 @@
 
 <% @prescriptions.each do |prescription| %>
   <tr>
-    <td class="helpHed"><%= prescription.customer.name %></td>
-    <td><%= prescription.distance.name %></td>
+    <td class="helpHed"><%= prescription.customer.full_name %></td>
     <td><%= prescription.right_sph %></td>
     <td><%= prescription.right_cyl %></td>
     <td><%= prescription.right_axi %></td>
@@ -34,7 +33,7 @@
     <td><%= prescription.left_cyl %></td>
     <td><%= prescription.left_axi %></td>
     <td><%= prescription.left_vision %></td>
-    <td><%= link_to 'Show', prescription %></td>
+    <td><%= link_to 'Show', prescription %> </td>
     <td><%= link_to 'Edit', edit_prescription_path(prescription) %></td>
     <td><%= link_to 'Destroy', prescription, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

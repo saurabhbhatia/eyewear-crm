@@ -2,15 +2,15 @@
 
 <h1>
   <b>Product name:</b>
-  <b style = "color:green"><%= @order_type.name %>
+  <b><%= @order_type.name %></b>
 </h1><br/ >
 
-<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+<table>
   <tr>
-    <td class="helpHed"> Product Brand Name</td>
-    <td class="helpHed"> Product Model Name</td>
-    <td class="helpHed"> Product color</td>
-    <td class="helpHed"> Quantity</td>
+    <td> Brand Name</td>
+    <td> Model Name</td>
+    <td> color</td>
+    <td> Quantity</td>
   </tr>
 <% @order_type.brands.each do |p_d| %>
   <tr>

@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
+
 <% if @order.balance > 0 %>
  <h1> Pendind Amount : <%= @order.balance %> </h1>
 <% end %>
 <br />
-<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+
+<table cellspacing='0' class="Design3">
 <tr>
     <td class="helpHed"><b>Customer Name:</b>
-  <%= @order.customer.name %>
-  <%= @order.customer.middlename %>
-  <%= @order.customer.surname %></td>
+  <%= @order.customer.full_name %>
 </tr>
 
 <tr>
@@ -22,8 +22,8 @@
 </tr>
 
 <tr>
-    <td class="helpHed"><b>Net:</b>
-  qu<%= @order.net %> </td>
+    <td class="helpHed"><b>Net amount to be paid:</b>
+    <%= @order.net %> </td>
 </tr>
 
 <tr>

@@ -1,7 +1,8 @@
 
 <h1>All Customers</h1>
 
-<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+<table cellspacing='0' class="Design3">
+ <thead>
   <tr>
     <td colspan="4" class="helpHed">Name</td>
     <td class="helpHed">City</td>
@@ -12,13 +13,12 @@
     <th></th>
     <th></th>
   </tr>
-
+</thead>
 <% @customers.each do |customer| %>
+</tbody>
   <tr>
     <td colspan="4" class="helpHed">
-      <%= customer.name %>&nbsp;&nbsp;
-      <%= customer.middlename %>&nbsp;&nbsp;
-      <%= customer.surname %>
+      <%= customer.full_name %>&nbsp;&nbsp;
     </td>
     <td><%= customer.city %></td>
     <td><%= customer.phone_number %></td>
@@ -28,6 +28,7 @@
     <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
     <td><%= link_to 'Destroy', customer, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+</tbody>
 <% end %>
 </table>
 

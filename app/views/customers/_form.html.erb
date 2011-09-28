@@ -13,40 +13,63 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :full_name, :placeholder=> "Enter Your Full Name Here" %>
   </div>
-  <div class="field">
-    <%= f.label :middlename %><br />
-    <%= f.text_field :middlename %>
-  </div>
-  <div class="field">
-    <%= f.label :surname %><br />
-    <%= f.text_field :surname %>
-  </div>
+
   <div class="field">
     <%= f.label :address %><br />
-    <%= f.text_area :address %>
+    <%= f.text_area :address, :size => "44x4" %>
   </div>
+
+ <div class="field">
+    <%= f.label :Email %><br />
+    <%= f.text_field :email, :placeholder => "enter a valid email address" %>
+  </div>
+  
+   <div class="field">
+    <%= f.label :Mobile_number %><br />
+    <%= f.text_field :mobile_number, :placeholder => "Mobile Number" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number, :placeholder =>"landline number" %>
+  </div>
+
+ <div class="field">
+    <%= f.label :Date_Of_Birth %><br />
+    <%= f.date_select :date_of_birth, :start_year => 1920 %>
+  </div>
+
   <div class="field">
     <%= f.label :area %><br />
     <%= f.text_field :area %>
   </div>
+
   <div class="field">
     <%= f.label :city %><br />
     <%= f.text_field :city %>
   </div>
+
   <div class="field">
     <%= f.label :business %><br />
-    <%= f.text_field :business %>
+    <%= f.select :business,
+                           options_for_select([["Select Fields", ""],
+                                               ["Accounting","Accounting"], 
+                                               ["Computers", "Computers"],
+                                               ["Electronics", "Electronics"],
+                                               ["Engineering", "Engineering"],
+                                               ["Human Resource", "Human Resource"],
+                                               ["Law","Law"],
+                                               ["Management Information System", "Management Information System"]]) %>
   </div>
-  <div class="field">
-    <%= f.label :phone_number %><br />
-    <%= f.text_field :phone_number %>
-  </div>
+
+
   <div class="field">
     <%= f.label 'Group' %><br />
     <%= f.collection_select:group_id , Group.find(:all), :id, :name %></td>
   </div>
+
   <div class="field">
     <%= f.label 'Categories' %><br />
     <%= f.collection_select:category_id , Category.find(:all), :id, :name %></td>
@@ -71,7 +94,7 @@
 
   <div class="field">
     <%= f.label :remark %><br />
-    <%= f.text_area :remark %>
+    <%= f.text_area :remark, :size => "40x4" %>
   </div>
 
   <div class="actions">

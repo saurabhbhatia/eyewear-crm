@@ -3,17 +3,30 @@
 <h1><%= link_to "Generate Order", new_order_path(:customer_id => @customer), :method => :get %></h1>
 <br />
 
-<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+<table>
 <tr>
   <td class="helpHed"><b>Name:</b>
-     <%= @customer.name %>
-     <%= @customer.middlename %>
-     <%= @customer.surname %></td>
+     <%= @customer.full_name %>
 </tr>
 
 <tr>
   <td class="helpHed"><b>Address:</b>
   <%= @customer.address %></td>
+</tr>
+
+<tr>
+  <td class="helpHed"><b>Date Of Birth:</b>
+  <%= @customer.date_of_birth.strftime("%B #{@customer.date_of_birth.day.ordinalize}, %Y") %></td>
+</tr>
+
+<tr>
+  <td class="helpHed"><b>Age:</b>
+  <%= @customer.age %> Years</td>
+</tr>
+
+<tr>
+  <td class="helpHed"><b>Email address:</b>
+  <%= @customer.email %></td>
 </tr>
 
 <tr>
@@ -44,6 +57,11 @@
 <tr>
   <td class="helpHed"><b>Phone number:</b>
   <%= @customer.phone_number %></td>
+</tr>
+
+<tr>
+  <td class="helpHed"><b>Mobile number:</b>
+  <%= @customer.mobile_number %></td>
 </tr>
 
 <tr>

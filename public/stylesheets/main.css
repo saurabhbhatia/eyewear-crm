@@ -11,7 +11,7 @@ body { font: .74em Sans-Serif; color: #444; background: #f4f4f4; line-height: 1.
 a { text-decoration: none; color: #008080; }
 p  { margin: 0 0 15px; }
 .wrap { margin: 0 auto; width: 960px; }
-
+.product h2 {font-size: 18px; margin-bottom: 3px;}
 #header { height: 160px; background: #080808 url(../images/bg.jpg) no-repeat center top; color: #ccc; margin: 0 0 30px; }
 #header p { float: right; margin: 20px 0 0; }
 
@@ -19,7 +19,7 @@ p  { margin: 0 0 15px; }
 #logo a { color: #fff; }
 
 h1 { letter-spacing: -0.04em; font-size: 1.8em; text-shadow: 1px 1px 1px #000; }
-h2 { font-size: 1.4em; text-shadow: 1px 1px 1px #fff; margin: 0 0 10px; color: #008080; }
+h2 { font-size: 1.4em; text-shadow: 1px 1px 1px #fff; color: #008080; }
 h3 { font-size: 1.2em; margin: 0 0 6px; }
 h4 { font-size: 1.2em Pirulen; margin: 0 0 6px;}
 

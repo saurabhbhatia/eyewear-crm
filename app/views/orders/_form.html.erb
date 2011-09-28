@@ -1,7 +1,4 @@
 <br />
-<% unless Customer.name %>
-<b>   Please Create a Customer First </b>
-<% else %>
 <%= form_for(@order) do |f| %>
   <% if @order.errors.any? %>
     <div id="error_explanation">
@@ -18,12 +15,9 @@
 
   <div class="field">
     <b><%= f.label 'Customer' %></b><br />
-    <%= f.collection_select:customer_id , Customer.find(:all), :id, :name %></td>
+    <%= f.collection_select:customer_id , Customer.find(:all), :id, :full_name %></td>
   </div><p></p>
 
-  <div class="field">
-       <%= f.hidden_field :customer_id, :value=> (params[:customer_id]) %>
-  </div><p></p>
 
   <div class="field">
     <b><%= f.label 'Order Type' %></b><br />
@@ -53,11 +47,10 @@
 
   <div class="field">
     <b><%= f.label :Delivery_Date %></b><br />
-    <%= f.calendar_date_select :delivery_date, :placeholder => "Enter The date of delivery" %> 
+    <%= f.text_field :delivery_date, :placeholder => "Enter The date of delivery" %> 
   </div><p></p>
 
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
 <% end %>

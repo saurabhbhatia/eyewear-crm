@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110829043512) do
+ActiveRecord::Schema.define(:version => 20110928081225) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -62,22 +62,27 @@ ActiveRecord::Schema.define(:version => 20110829043512) do
   end
 
   create_table "customers", :force => true do |t|
-    t.string   "name"
-    t.string   "middlename"
-    t.string   "surname"
+    t.string   "full_name"
     t.text     "address"
+    t.string   "phone_number"
+    t.string   "mobile_number"
+    t.string   "email"
+    t.date     "date_of_birth"
     t.string   "area"
     t.string   "city"
     t.string   "business"
-    t.string   "phone_number"
     t.integer  "group_id"
     t.integer  "category_id"
     t.text     "remark"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "religion"
     t.string   "marital_status"
+    t.string   "company"
   end
+
+  add_index "customers", ["slug"], :name => "index_customers_on_slug", :unique => true
 
   create_table "distances", :force => true do |t|
     t.string   "name"

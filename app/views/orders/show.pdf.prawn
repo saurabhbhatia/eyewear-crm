@@ -6,7 +6,7 @@ pdf.font_size 18
 pdf.text_box "Invoice # #{@order.id}", :align => :right
 
 pdf.font_size 22
-pdf.text "Thank you for your order, #{@order.customer.name}.", :align => :center
+pdf.text "Thank you for your order, #{@order.customer.full_name}.", :align => :center
 pdf.font_size 12
 pdf.text "Address: #{@order.customer.address}.", :align => :center
 pdf.text "Contact Number: #{@order.customer.phone_number}.", :align => :center
@@ -16,7 +16,7 @@ pdf.move_down 20
 pdf.font_size 14
 pdf.text "Below you can find your order details. We hope you shop with Awesome Company again in the future. Now unleash those fonts like hell have no fury!", :align=> :center
 
-orderinfo = [["Customer Name", "#{@order.customer.name}"],
+orderinfo = [["Customer Name", "#{@order.customer.full_name}"],
              ["Order Type", "#{@order.order_type.name}"],
              ["Item Discount", "#{@order.discount}"],
              ["Net Amount", "#{@order.net}"],

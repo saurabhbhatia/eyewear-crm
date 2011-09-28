@@ -1,20 +1,21 @@
 <h1>Listing All Products</h1>
 <br />
-<table summary="Software or other data table" class="sofT" cellspacing="0" border>
+<table>
+<thead>
   <tr>
-    <th scope="col">Product Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th scope="col">Product Name <hr /></th>
   </tr>
-
+</thead>
 <% @order_types.each do |order| %>
+<tbody>
   <tr>
-    <td><%= order.name %></td>
-    <td><%= link_to 'Show', order %></td>
-    <td><%= link_to 'Edit', edit_order_type_path(order) %></td>
-    <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>
+     <td><%= order.name %>  <hr /></td>
+     <td><%= link_to 'Inventory', order %> | <hr /> </td>
+     <td><%= link_to 'Show', order %> | <hr /> </td>
+     <td><%= link_to 'Edit', edit_order_type_path(order) %> | <hr /> </td>
+     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %><hr /></td>
   </tr>
+</tbody>
 <% end %>
 </table>
 

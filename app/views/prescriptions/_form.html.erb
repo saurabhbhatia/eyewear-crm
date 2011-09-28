@@ -1,3 +1,4 @@
+<br /><br />
 <%= form_for(@prescription) do |f| %>
   <% if @prescription.errors.any? %>
     <div id="error_explanation">
@@ -14,12 +15,9 @@
 
   <div class="field">
       <th><%= f.label 'Customer Name' %></th><br />
-      <td><%= f.collection_select:customer_id , Customer.find(:all), :id, :name %></td>
+      <td><%= f.collection_select:customer_id , Customer.find(:all), :id, :full_name %></td>
 </div>
-  <div class="field">   
-     <th><%= f.label 'Distance' %></th><br />
-     <td><%= f.collection_select:distance_id , Distance.find(:all), :id, :name %></td>
-</div>
+<br /><br />
 
 <table id="newspaper-a" style=background-color:#D0DAFD>
    <td><b>Right EYE <b><br/>

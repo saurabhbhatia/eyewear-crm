@@ -1,18 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<table summary="Software or other data table" class="sofT" cellspacing="0" border>
-<tr>
-  <td class="helpHed"><b>Customer Name :</b>
-  <%= @prescription.customer.name %></td>
-  <td class="helpHed"><b>Distance Status:</b>
-  <%= @prescription.distance.name %></td>
-</tr>
-</table>
-<br />
+<div class = "product">
+  <h2 style = "color:black"><%= @prescription.customer.full_name %></h2>
 
 
 <table summary="Software or other data table" class="sofT" cellspacing="0" border>
-<td class="helpHed"><h2>Right Eye</h2><br />
+<td class="product"><h2>Right Eye</h2><br />
+
  <table>
 <tr>
   <td class="helpHed"><b>Right sph:</b>
@@ -33,8 +27,9 @@
   <td class="helpHed"><b>Right vision:</b>
   <%= @prescription.right_vision %></td>
 </tr>
-</table></td>
-
+</table>
+</td>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <td class="helpHed"><h2>Left Eye</h2><br /><table>
 <tr>
   <td class="helpHed"><b>Left sph:</b>

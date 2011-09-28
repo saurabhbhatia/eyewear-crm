@@ -3,16 +3,13 @@ class Order < ActiveRecord::Base
  validates_presence_of :customer_id,
                        :message => "No Order Can Be Made Without a Customer, Please Select a Customer"
 
-<<<<<<< HEAD
 # validate  :amount_has_to_be_greater_than_minimum
  
  validates :discount, :format => { :with => /^\d+??(?:\.\d{0,2})?$/ },
                       :numericality => {:greater_than => 0}
-=======
  validate  :numericality => {:greater_than => 0}
  
  validates :discount, :format => { :with => /^\d+??(?:\.\d{0,2})?$/ }
->>>>>>> 575aa786b295d1e83459e6b81047e090e8f957e8
 
  validates :advance, :format => { :with => /^\d+??(?:\.\d{0,2})?$/ },
                       :numericality => {:greater_than => 0}
